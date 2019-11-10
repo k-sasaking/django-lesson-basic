@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Detail</title>
+</head>
+<body>
+    <h3>詳細画面</h3>
+    <hr/>
+    <table>
+      <tr>
+        <td>post name: </td>
+        <td>{{ object.post_name }}</td>
+      </tr>
+      <tr>
+        <td>post date: </td>
+        <td>{{ object.post_date }}</td>
+      </tr>
+      <tr>
+        <td>post category: </td>
+        <td>{{ object.category }}</td>
+      </tr>
+      <tr>
+        <td>text: </td>
+          <td><pre>{{ object.text }}</pre></td>
+      </tr>
+    </table>
+    <hr/>
+</body>
+</html>

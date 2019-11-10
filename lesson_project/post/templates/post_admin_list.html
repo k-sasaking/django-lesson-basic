@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post List</title>
+</head>
+<body>
+    <h3>管理者用一覧画面</h3>
+    <div><a href="{% url 'post:post_create' %}">投稿画面</a></div>
+    <hr/>
+    <table>
+      <tr>
+        <th>post name</th>
+        <th>post date</th>
+        <th>update link</th>
+        <th>delet link</th>
+      </tr>
+    {% for object in object_list %}
+      <tr>
+        <td>{{ object.post_name }}</td>
+        <td>{{ object.post_date }}</td>
+        <td><a href="{% url 'post:post_update' object.id %}">update</a>
+        <td><a href="{% url 'post:post_delete' object.id %}">delete</a></td>
+      </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
